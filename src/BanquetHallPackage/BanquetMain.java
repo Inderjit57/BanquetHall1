@@ -13,10 +13,12 @@ public class BanquetMain {
 		banquet.baseCost = sc.nextDouble();
 		System.out.println("Enter food cost");
 		banquet.foodCost = sc.nextDouble();
-		System.out.println("Enter beverage cost and tip");
-		banquet.beverageCostAndTip = sc.nextDouble();
+		System.out.println("Enter beverage cost");
+		banquet.beverageCost = sc.nextDouble();
+		System.out.println("Enter the desired Tip amount");
+		banquet.tip = sc.nextDouble();
 		double setCalculateBaseCost = banquet.calculateBaseCost(banquet.baseCost, banquet.foodCost,
-				banquet.beverageCostAndTip);
+				banquet.beverageCost, banquet.tip);
 		System.out.println("Total Base cost: " + setCalculateBaseCost);
 
 		// TOTAL TAX ON BASE COST
@@ -34,6 +36,7 @@ public class BanquetMain {
 		double setTotalCost = banquet.calculateTheTotalCost(setCalculateBaseCost, setNoOfGuests, setTaxPercentage);
 		System.out.println("Total Cost is: " + setTotalCost); 
 		
+		System.out.println("Have a nice day. Good luck paying ");
 		
 	}
 

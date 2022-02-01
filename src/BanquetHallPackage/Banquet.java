@@ -4,7 +4,8 @@ public class Banquet {
 
 	double baseCost;
 	double foodCost;
-	double beverageCostAndTip;
+	double beverageCost;
+	double tip;
 	double totalBaseCost;
 
 	double taxPercent;
@@ -14,12 +15,17 @@ public class Banquet {
 	double noOfGuests;
 
 	double totalCost;
+	
+	public Banquet() {
+		System.out.println("WELCOME TO THE BANQUET HALL. FILL INFORMATION BELOW");
+	}
 
-	double calculateBaseCost(double baseCost, double foodCost, double beverageCostAndTip) {
+	double calculateBaseCost(double baseCost, double foodCost, double beverageCost, double tip) {
 		this.baseCost = baseCost;
 		this.foodCost = foodCost;
-		this.beverageCostAndTip = beverageCostAndTip;
-		totalBaseCost = (baseCost + foodCost + beverageCostAndTip);
+		this.beverageCost= beverageCost;
+		this.tip = tip;
+		totalBaseCost = (baseCost + foodCost + beverageCost+tip);
 		return totalBaseCost;
 	}
 
